@@ -1,0 +1,4 @@
+1.When we use Strict mode in react it renders the component two times in development to check the bugs if any in generic javascript code went wrong in second render. 
+After building the production build it it renders it only one time
+2.Whenever we pass the props whose value are dynamic i.e., changes most times we need to use curly braces. This in results in destructring the prop.
+If we don't use curlybrace jvascript assumes it as an object 
