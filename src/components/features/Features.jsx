@@ -3,9 +3,18 @@ import PlayArrow from '@mui/icons-material/PlayArrow';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import "./features.css";
 
-function Features() {
+function Features({type}) {
   return (
     <div className="features">
+      {type && (<div className="category">
+        <span>{type==="movie"?"Movies":"Series"}</span>
+        <select name="genre" id="genre">
+          <option>Genre</option>
+          <option value="adventure">Adventure</option>
+          <option value="Comedy">Comedy</option>
+          <option value="crime">Crime</option>
+          </select>
+      </div>)}
       <img
         src="https://www.ucl.ac.uk/news/sites/news/files/styles/large_image/public/ucl_quad_1.png?itok=fl4E7RXE"
         alt="University"
@@ -13,10 +22,8 @@ function Features() {
       <div className="info">
         <img  src="https://www.ucl.ac.uk/news/sites/news/files/styles/large_image/public/ucl_quad_1.png?itok=fl4E7RXE" alt="" />
         <span className="desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
-          iusto nisi facilis corrupti labore tempore exercitationem nesciunt
-          odit cum velit eius, porro maiores dicta neque commodi. Quis quaerat
-          debitis nulla.
+        loremadsafsjkjkdkjvdsjkdsjvkdsdskjhvdskvkdsv
+        hjddskjfkdsfjdskfdskdsjkbvbvjsdkvkdjbvkdjb
         </span>
         <div className="buttons">
         <button className="play">
