@@ -1,8 +1,6 @@
-body{
-    overscroll-behavior: none;
-}
 
 .home{
     background-color: var(--main-color);
+    overflow: hidden;
     
 }
