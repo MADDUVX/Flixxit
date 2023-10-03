@@ -1,4 +1,30 @@
 POST http://localhost:3005/register
 Content-Type: application/json
 
-{"username":"saikumr" , "email":"saisk13@gmail.com" ,"password":"sa123" }
+{"email":"sais3@gmail.com", "password":"Saiboom!234", "username":"saikubomm"}
+
+###
+
+POST http://localhost:3005/login
+Content-Type: application/json
+
+{"email":"sais3@gmail.com", "password":"Saiboom!234"}
+
+###
+PUT http://localhost:3005/up/65188cb61571590c5f9eeb1f
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTg4Y2I2MTU3MTU5MGM1ZjllZWIxZiIsImlzQWRtaW4iOiJmYWxzZSIsImlhdCI6MTY5NjM2MDE5MiwiZXhwIjoxNjk2MzYwMjUyfQ.N4sPIcEns1-tHVYPMpm8ZnPIIuYwyVaAHLw8UjH56o4
+
+{"username":"saiupdated"}
+
+###
+{
+  "_id": "65188cb61571590c5f9eeb1f",
+  "username": "saikubomm",
+  "email": "sais3@gmail.com",
+  "profilePic": "",
+  "isAdmin": "false",
+  "createdAt": "2023-09-30T21:01:42.997Z",
+  "updatedAt": "2023-09-30T21:01:42.997Z",
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTg4Y2I2MTU3MTU5MGM1ZjllZWIxZiIsImlzQWRtaW4iOiJmYWxzZSIsImlhdCI6MTY5NjM1OTc4NCwiZXhwIjoxNjk2MzU5ODQ0fQ.YcPcJ-DHGCufpg-xcHMTILcMUd8bww_IZUPkPdSkPk8"
+}

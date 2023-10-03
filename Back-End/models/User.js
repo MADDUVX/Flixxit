@@ -1,13 +1,13 @@
 import mongoose, { Schema, model } from "mongoose";
 import Joi from "joi";
 
-const passowrdRegex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+const passwordRegex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
 
 const regValidate = Joi.object(
   {
     username: Joi.string().min(8).max(15).required(),
     email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).required(),
-    password: Joi.string().pattern(new RegExp(passowrdRegex)).required(),
+    password: Joi.string().pattern(new RegExp(passwordRegex)).required(),
   }
    
 );
