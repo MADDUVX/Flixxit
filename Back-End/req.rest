@@ -1,7 +1,9 @@
 POST http://localhost:3005/register
 Content-Type: application/json
 
-{"email":"sais3@gmail.com", "password":"Saiboom!234", "username":"saikubomm"}
+{"email":"nioa@gmail.net", "password":"Ninjastorm!234", "username":"Niopaptorm"}
+
+#{"email":"sais3@gmail.com", "password":"Saiboom!234", "username":"saikubomm"}
 
 ###
 
@@ -11,20 +13,22 @@ Content-Type: application/json
 {"email":"sais3@gmail.com", "password":"Saiboom!234"}
 
 ###
-PUT http://localhost:3005/up/65188cb61571590c5f9eeb1f
+PUT http://localhost:3005/user/65188cb61571590c5f9eeb1f
 Content-Type: application/json
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTg4Y2I2MTU3MTU5MGM1ZjllZWIxZiIsImlzQWRtaW4iOiJmYWxzZSIsImlhdCI6MTY5NjM2MDE5MiwiZXhwIjoxNjk2MzYwMjUyfQ.N4sPIcEns1-tHVYPMpm8ZnPIIuYwyVaAHLw8UjH56o4
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTg4Y2I2MTU3MTU5MGM1ZjllZWIxZiIsImlzQWRtaW4iOiJmYWxzZSIsImlhdCI6MTY5NjQ0NzYwMiwiZXhwIjoxNjk2NDQ3OTAyfQ.NOXBaPI25Z41nVKuMH1-UGAcninDuDfvstYYVwUQGk0
 
-{"username":"saiupdated"}
+{"isAdmin":true}
 
 ###
-{
-  "_id": "65188cb61571590c5f9eeb1f",
-  "username": "saikubomm",
-  "email": "sais3@gmail.com",
-  "profilePic": "",
-  "isAdmin": "false",
-  "createdAt": "2023-09-30T21:01:42.997Z",
-  "updatedAt": "2023-09-30T21:01:42.997Z",
-  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTg4Y2I2MTU3MTU5MGM1ZjllZWIxZiIsImlzQWRtaW4iOiJmYWxzZSIsImlhdCI6MTY5NjM1OTc4NCwiZXhwIjoxNjk2MzU5ODQ0fQ.YcPcJ-DHGCufpg-xcHMTILcMUd8bww_IZUPkPdSkPk8"
-}
+DELETE http://localhost:3005/user/651dac16e12a3eaf58657ff0
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MWRhYzE2ZTEyYTNlYWY1ODY1N2ZmMCIsImlzQWRtaW4iOiJmYWxzZSIsImlhdCI6MTY5NjQ0MzQ0MywiZXhwIjoxNjk2NDQzNzQzfQ.6W4YOKfeEOEHn4cWOfmYh5JPHaNq6Q50R2hSkvg7tnc
+
+###
+
+GET http://localhost:3005/user/find/65188cb61571590c5f9eeb1h
+
+###
+GET http://localhost:3005/user/?new=true
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTg4Y2I2MTU3MTU5MGM1ZjllZWIxZiIsImlzQWRtaW4iOiJ0cnVlIiwiaWF0IjoxNjk2NDQ3OTc0LCJleHAiOjE2OTY0NDg1NzR9.SqwYnq0jDqNgoyaf4klh2kJZEqIDAg1-z_peXkq7wKc
