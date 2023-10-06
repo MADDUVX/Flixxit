@@ -2,7 +2,8 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import auth from "./routes/auth";
-import user from "./routes/users";
+import users from "./routes/users";
+import movies from "./routes/movies";
 const app = express();
 
 dotenv.config();
@@ -14,6 +15,7 @@ mongoose.connect(process.env.MONGO_URL,{
 
 app.use(express.json());
 app.use("/auth",auth);
-app.use("/user", user);
+app.use("/users", users);
+app.use("/movies",movies);
 
 app.listen(3005,()=>console.log("Back End"));
