@@ -14,8 +14,7 @@ const movieSchema = new Schema(
     genre: { type: String },
     isSeries: { type: Boolean, default: false },
   },
-  { timestamps: true },
-  { versionKey: false }
+  { timestamps: true, versionKey: false}
 );
 
 const Movies = model("Movies", movieSchema);
