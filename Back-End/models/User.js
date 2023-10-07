@@ -27,7 +27,7 @@ const userschema = new Schema({
   email:{type:String, required:true, unique:true,},
   password:{type:String, required:true, unique:true,},
   profilePic:{type:String, default:""},
-  isAdmin:{type:String,default:"false"}
+  isAdmin:{type:Boolean,default:false}
 },
 { timestamps: true , versionKey: false }// versionKey used to avoid creating of __v field while creating new documents
 );

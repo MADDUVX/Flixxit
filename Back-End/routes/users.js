@@ -58,6 +58,7 @@ router.get("/find/:id", async (req, res) => {
 router.get("/findall", VerifyToken, async (req, res) => {
   const query = req.query.new; //if new is used in query only the last 5 users are returned
   if (req.user.isAdmin) {
+    console.log(typeof(req.user.isAdmin))
     try {
       const users = query
         ? await User.find().sort({ _id: -1 }).limit(5)

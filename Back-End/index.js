@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import auth from "./routes/auth";
 import users from "./routes/users";
 import movies from "./routes/movies";
+import list from "./routes/list"
 const app = express();
 
 dotenv.config();
@@ -17,5 +18,6 @@ app.use(express.json());
 app.use("/auth",auth);
 app.use("/users", users);
 app.use("/movies",movies);
+app.use("/list",list);
 
 app.listen(3005,()=>console.log("Back End"));
