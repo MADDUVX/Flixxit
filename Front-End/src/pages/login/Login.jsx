@@ -9,7 +9,7 @@ function Login() {
     <div className="login">
       <div className="top">
         <img
-          className="registerLogo"
+          className="loginLogo"
           src="/StreamIt.png"
           alt="StreamIt-logo"
         />
@@ -22,8 +22,8 @@ function Login() {
        <Button variant="contained" className="loginBtn">Sign In</Button>
        <span>New to Netflix? <b>Sign up Now</b></span>
        <small>
-        The page is protect Google reCAPTCHA to ensure you're not a bot.
-        <b>Learn more </b>
+        The page is protected by  Google reCAPTCHA to ensure you're not a bot.
+        <b> Learn more</b>
        </small>
        </form>
       </div>

@@ -1,17 +1,21 @@
 import { ArrowBackOutlined } from '@mui/icons-material'
 import React from 'react'
 import "./watch.css";
+import { Link, useLocation } from 'react-router-dom';
 
 function Watch() {
-    const videopath="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0fd273d2c6d9a064f3ae35579b2bbdf&profile_id=139&oauth2_token_id=57447761";
+  const location = useLocation(); //returns current location object
+  const movie = location.state.movie;
 
   return (
     <div className='watch'>
+    <Link to="/">
     <div className="backbutton">
         <ArrowBackOutlined/>
-        Home
+        <span>Home</span>
     </div>
-    <video className="video" autoplay controls progress src={videopath}/>
+    </Link>
+    <video className="video" autoPlay controls progress src={movie.trailer}/>
     </div>
   )
 }

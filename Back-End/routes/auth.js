@@ -41,9 +41,9 @@ router.post("/login", async (req, res) => {
       const {password, ...info} = findUser._doc;
       if (origPassword === req.body.password) {
         const accessToken = jwt.sign({id:findUser._id, isAdmin:findUser.isAdmin}, process.env.Secret_Key, {
-          expiresIn: "10m",
+          expiresIn: "3h",
         });  //using id and admin for signing
-        res.status(200).send({...info, accessToken});
+        res.status(200).json({...info, accessToken});
         res.s
       } 
       else res.status(401).json("Incorrect Password");
