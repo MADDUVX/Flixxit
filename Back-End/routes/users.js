@@ -75,20 +75,6 @@ router.get("/findall", VerifyToken, async (req, res) => {
 router.get("/stats", async (req, res) => {
   const today = new Date();
   const prevYear = today.setFullYear(today.getFullYear() - 1);
-  const monthsArray = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
   try {
     const data = await User.aggregate([
       {
