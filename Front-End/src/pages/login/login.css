@@ -66,8 +66,15 @@
             & span{
                 color:lightgray;
 
-                >b{
+              & b{
+                
+                margin-left: 5px;
+                  text-decoration: underline;
                     color: white;
+
+                    &:hover{
+                      color: blue;
+                    }
                 }
             }
     

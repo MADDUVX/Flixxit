@@ -17,7 +17,7 @@ function ListItem({ index, item }) {
     const getMovie= async()=>{
       try{
         const itemResp = await axios.get("api/movies/find/"+item,
-          { headers: { Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTg4Y2I2MTU3MTU5MGM1ZjllZWIxZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5NzA1MTgwNCwiZXhwIjoxNjk3MDYyNjA0fQ.0inCM1ABLiP3o_wIK1TIbE2M_2NJid01XU2xJfqukXw" } }
+          { headers: {  Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken } }
         )
         setMovDetails(itemResp.data);
       }
@@ -44,7 +44,7 @@ function ListItem({ index, item }) {
     >
    
     <img
-      src="https://th.bing.com/th/id/R.390b0e5bc6bd5a6dc299a4b0c6d0ac51?rik=rx6JxgUeISaxTg&riu=http%3a%2f%2fhdqwalls.com%2fwallpapers%2faquaman-new-2r.jpg&ehk=330XIFPN2mTshFitLiLwGjbwoZyppg4mtiSoAFY67Tw%3d&risl=&pid=ImgRaw&r=0"
+      src={movDetails.img}
       alt={movDetails.imgTitle}
     />
       {isHovered && (
@@ -64,7 +64,7 @@ function ListItem({ index, item }) {
               <ThumbDownOutlined className="icon"/>
             </div>
             <div className="itemInfoTop">
-              <span>1 hour 14 mins</span>
+              <span>{movDetails.duration}</span>
               <span className="limit">{movDetails.limit}</span>
               <span>{movDetails.year}</span>
             </div>

@@ -7,6 +7,7 @@ import ListItem from "../listitem/ListItem";
 const List = function ({ list }) {
   const listRef = useRef();
   const [slideNumer, setSlideNumber] = useState(0);
+  const clickLimit =window.innerWidth / 230;
 
   const handleClick = (direction) => {
     let distance = listRef.current.getBoundingClientRect().x - 50;
@@ -15,7 +16,7 @@ const List = function ({ list }) {
       setSlideNumber(slideNumer - 1);
       listRef.current.style.transform = `translateX(${230 + distance}px)`;
     }
-    if (direction === "right" && slideNumer < 5) {
+    if (direction === "right" && slideNumer < 10-clickLimit) {
       setSlideNumber(slideNumer + 1);
       listRef.current.style.transform = `translateX(${-230 + distance}px)`;
     }

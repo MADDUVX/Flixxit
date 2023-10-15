@@ -33,7 +33,6 @@ router.delete("/:id", VerifyToken, async (req, res) => {
 
 //GET
 router.get("/", VerifyToken, async (req, res) => {
-    if(req.user.isAdmin){
         const typeQuery= req.query.type;
         const genreQuery = req.query.genre;
         let list=[];
@@ -58,7 +57,7 @@ router.get("/", VerifyToken, async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
-  } else res.status(403).json("You cannot add movies");
+  
 });
 
 

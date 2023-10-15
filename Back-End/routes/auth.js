@@ -41,7 +41,7 @@ router.post("/login", async (req, res) => {
       const {password, ...info} = findUser._doc;
       if (origPassword === req.body.password) {
         const accessToken = jwt.sign({id:findUser._id, isAdmin:findUser.isAdmin}, process.env.Secret_Key, {
-          expiresIn: "3h",
+          expiresIn: "1h",
         });  //using id and admin for signing
         res.status(200).json({...info, accessToken});
         res.s

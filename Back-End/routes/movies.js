@@ -64,7 +64,7 @@ router.get("/find/:id", async (req, res) => {
 router.get("/random", VerifyToken, async (req, res) => {
   const type = req.query.type; //type is used to get either a movie/series
   let random;
-  if (req.user.isAdmin) {
+  
     try {
      if(type==="Series" || type==="series"){
         random = await Movie.aggregate([
@@ -79,15 +79,13 @@ router.get("/random", VerifyToken, async (req, res) => {
      }
       res.status(200).json(random);
     } catch (err) {
-      res.status(401).json("Need Admin acess");
+      res.status(500).json(error);
     }
-  } else res.status(500).json(err);
 });
 
 //fndall
 router.get("/findall", VerifyToken, async (req, res) => {
   let findAll;
-  if (req.user.isAdmin) {
     try {
       if(req.query.type==="Series" ||req.query.type==="series"){
         findAll = await Movie.aggregate([
@@ -103,6 +101,5 @@ router.get("/findall", VerifyToken, async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
-  } else res.status(401).json("Need Admin acess");
 });
 export default router;
