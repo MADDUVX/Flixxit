@@ -2,6 +2,9 @@ import { Router } from "express";
 import { User, loginValidate, regValidate } from "../models/User.js";
 import CryptoJS from "crypto-js";
 import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const router = Router();
 
@@ -13,7 +16,7 @@ router.post("/register", async (req, res) => {
     email: req.body.email,
     password: CryptoJS.AES.encrypt(
       req.body.password,
-      process.env.Secret_Key
+      process.env.SECRET_KEY
     ).toString(),
   });
   try {
@@ -34,13 +37,13 @@ router.post("/login", async (req, res) => {
       
       var bytes = CryptoJS.AES.decrypt(
         findUser.password,
-        process.env.Secret_Key
+        process.env.SECRET_KEY
       );
       var origPassword = bytes.toString(CryptoJS.enc.Utf8);
 
       const {password, ...info} = findUser._doc;
       if (origPassword === req.body.password) {
-        const accessToken = jwt.sign({id:findUser._id, isAdmin:findUser.isAdmin}, process.env.Secret_Key, {
+        const accessToken = jwt.sign({id:findUser._id, isAdmin:findUser.isAdmin}, process.env.SECRET_KEY, {
           expiresIn: "1h",
         });  //using id and admin for signing
         res.status(200).json({...info, accessToken});
