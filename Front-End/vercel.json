@@ -1,8 +1,8 @@
 {
-    "rewrites": [
-      {
-        "source": "/api",
-        "destination": "https://streamit-backend.vercel.app/"
-      }
-    ]
-  }
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
