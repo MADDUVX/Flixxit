@@ -6,10 +6,10 @@ export default defineConfig({
   server: {
     proxy: {
       "/api":{
-        target:'http://localhost:3005/',
+        target:'https://streamit-backend.vercel.app/',
         rewrite:(path)=>path.replace(/^\/api/, "")
       } 
-    },
+    }
   },
   plugins: [react()]
 })
