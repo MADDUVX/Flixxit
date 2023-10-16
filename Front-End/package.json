@@ -32,6 +32,7 @@
     "react-router-dom": "^6.16.0",
     "recharts": "^2.8.0",
     "sass": "^1.68.0",
+    "vercel": "^32.4.1",
     "vite": "^4.4.5"
   }
 }
