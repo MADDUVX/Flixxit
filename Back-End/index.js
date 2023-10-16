@@ -1,10 +1,10 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import auth from "./routes/auth";
-import users from "./routes/users";
-import movies from "./routes/movies";
-import list from "./routes/list"
+import auth from "./routes/auth.js";
+import users from "./routes/users.js";
+import movies from "./routes/movies.js";
+import list from "./routes/list.js"
 import cors from "cors"
 const app = express();
 

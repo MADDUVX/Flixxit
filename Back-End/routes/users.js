@@ -1,7 +1,7 @@
 import { Router } from "express";
 import CryptoJS from "crypto-js";
-import VerifyToken from "./verifyToken";
-import { User } from "../models/User";
+import VerifyToken from "./verifyToken.js";
+import { User } from "../models/User.js";
 
 
 const router = Router();

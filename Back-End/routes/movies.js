@@ -1,6 +1,6 @@
 import { Router } from "express";
 import VerifyToken from "./verifyToken";
-import Movie from "../models/Movie";
+import Movie from "../models/Movie.js";
 
 
 const router = Router();

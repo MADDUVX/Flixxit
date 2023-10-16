@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { User, loginValidate, regValidate } from "../models/User";
+import { User, loginValidate, regValidate } from "../models/User.js";
 import CryptoJS from "crypto-js";
 import jwt from "jsonwebtoken";
 
