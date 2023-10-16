@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGO_URL,{
     useUnifiedTopology:true,
 }).then(()=>console.log("DB connected")).catch(err=>console.log(err));
 
-app.get("/",(req,res)=>res.send('<h1 style={"color:green;top:0;left:0;right:0;bottom:0;margin:auto;width:50%;"}>Welcome to StreamIt Back End</h1>'))
+app.get("/",(req,res)=>res.send('<h1>Welcome to StreamIt Back End</h1>'))
 app.use(express.json());
 app.use(cors());
 app.use("/auth",auth);
