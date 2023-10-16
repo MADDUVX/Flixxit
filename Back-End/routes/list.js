@@ -1,5 +1,5 @@
 import { Router } from "express";
-import VerifyToken from "./verifyToken";
+import VerifyToken from "./verifyToken.js";
 import List from "../models/List.js";
 
 

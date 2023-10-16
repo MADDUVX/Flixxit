@@ -1,5 +1,5 @@
 import { Router } from "express";
-import VerifyToken from "./verifyToken";
+import VerifyToken from "./verifyToken.js";
 import Movie from "../models/Movie.js";
 
 
