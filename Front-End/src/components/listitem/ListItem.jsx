@@ -33,7 +33,7 @@ function ListItem({ index, item }) {
   
 
 
-  const trailer = "https://vod-progressive.akamaized.net/exp=1697500944~acl=%2Fvimeo-transcode-storage-prod-us-central1-h264-720p%2F01%2F1158%2F11%2F280794897%2F1053215775.mp4~hmac=69e84278b07eb44bf32a74fce47f2f2f82c2cede3da6351b5270704ab98e8ed6/vimeo-transcode-storage-prod-us-central1-h264-720p/01/1158/11/280794897/1053215775.mp4";
+  const trailer = "https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0fd273d2c6d9a064f3ae35579b2bbdf&profile_id=139&oauth2_token_id=57447761";
   return (
     
     <div
