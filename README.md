@@ -6,7 +6,7 @@ StreamIt, your ultimate streaming destination, offers an exclusive and captivati
 
 ## Demo
 
-![c53b4259-d1d7-490d-b59a-5e878e70d528](https://github.com/MADDUVX/StreamIt/assets/118983432/e503dd3a-8a43-47ca-a6b1-42662f5e6d54)
+https://github.com/MADDUVX/StreamIt/assets/118983432/e503dd3a-8a43-47ca-a6b1-42662f5e6d54
 
 
 
