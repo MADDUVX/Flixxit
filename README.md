@@ -27,7 +27,7 @@ password: Adminuser!123
 ```bash
 1.Enter u'r own MONGODB atlas database url and a random secret key for jwt sign and verification of accesstoken
 2.Use the end point /auth/register to register as admin so u can acess admin dashboard
-3. As mentioned above stremit uses mongo database data to fetch data, so one should add their own movies, series list either by using admin dashboard or using api's present in movies route
+3. As mentioned above streamit uses mongo database data to fetch data, so one should add their own movies, series list either by using admin dashboard or using api's present in movies route
 
 ```
 
